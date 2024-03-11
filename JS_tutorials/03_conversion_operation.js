@@ -26,8 +26,43 @@ console.log(booleanIsLoggedIn)
 // "" -> false
 // "SHUV" -> true
 
+/*
 let num = 33
 let strNum = String(num) // Converting number to String
 console.log(strNum)
 console.log(typeof strNum)
+*/
+
+/******************OPERATIONS******************/
+
+let value = 3
+let negValue = -value
+
+console.log(2+2)
+console.log(2-2)
+console.log(2*2)
+console.log(2/3)
+console.log(2%3)
+
+let str1 = "hey"
+let str2 = "SHUV"
+
+let str3 = str1+" "+str2
+
+console.log(str3)
+
+console.log("1"+2)
+console.log(1+"2")
+console.log("1"+2+2)
+console.log(1+2+"2")
+console.log(3+4*5%3)
+
+let num1 , num2, num3
+
+num1 = num2 = num3 = 2 + 2 // bad coding practice making complex
+ 
+let gameCounter = 100 
+gameCounter++
+console.log(gameCounter)
+
 

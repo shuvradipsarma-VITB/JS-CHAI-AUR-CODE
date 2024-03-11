@@ -7,3 +7,11 @@ const course = {
 
 const {name : n,price : p, tutor : t} = course // object de-structuring
 console.log(n," ",p," ",t)
+///////////////
+[
+    {},
+    {},
+    {},
+    {},
+    {}
+]
