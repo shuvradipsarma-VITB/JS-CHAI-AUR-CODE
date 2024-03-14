@@ -9,3 +9,9 @@ for(var i=0;i<str.length;i++)
     s = s + str[i]
 }
 console.log("output =",s)
+
+const s = {
+    name  : "SHUV"
+}
+
+
