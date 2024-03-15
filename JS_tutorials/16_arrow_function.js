@@ -23,6 +23,6 @@ const sum = (a,b) => (a+b) // implicit return
 console.log(sum(2,3))
 */
 
-// const function_name = (parameters) => { function scope }
+// const function_name = (parameters) => ({ object i.e key:value pair })
 const sum = (a,b) => ({name:"SHUV"}) // function has 2 parameters but object is returned
 console.log(sum(2,3))
