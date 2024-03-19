@@ -21,6 +21,7 @@ const startChangeColor = () => {
     
 
 }
+
 const stopChangeColor = () => {
    
 }
@@ -29,5 +30,5 @@ const stopChangeColor = () => {
 // document.getElementById("stop").addEventListener("click",stopChangeColor())
 
 
-document.querySelector("#start").addEventListener("click",startChangeColor)
-document.querySelector("#stop").addEventListener("click",stopChangeColor)
+document.querySelector('#start').addEventListener('click',startChangeColor)
+document.querySelector('#stop').addEventListener('click',stopChangeColor)
