@@ -54,7 +54,56 @@ const books = [
     }
 ]
 
-const userBooks = books.filter( (bk) => bk.genre == "fiction" )
+let userBooks = books.filter( (bk) => bk.genre == "fiction" )
+console.log(userBooks)
+
+userBooks = books.filter( (bk) => { return bk.publish >= 1950}) // when scope is opened return keyword is used.
 console.log(userBooks)
 
 
+// maps
+
+const myNums = [1,2,3,4,5,6,7,8,9,10]
+
+// const sum = myNums.map( (index) => index+10)
+// console.log("output = ",sum)
+
+// map is used to change the elements inside an array with the operation given.
+// filter is used to extract the elements that meet the condition given
+
+const new_Nums = myNums.map( (num) => num*10).map( (num) => num + 20).filter( (num) =>  num % 6 == 0 ) 
+console.log("output = ",new_Nums)
+
+// Reduce
+
+const  marks = [10,20,30,40,50]
+
+const total_marks = marks.reduce( (acc, curr_val) => {
+    console.log(`accumulator = ${acc} and current value = ${curr_val}`)
+    return acc + curr_val
+},0)
+
+console.log(total_marks)
+
+const shoppingCart = [
+    {
+        item : "maggi",
+        price : 20
+    },
+    {
+        item : "coffee",
+        price : 350
+    },
+    {
+        item : "soda",
+        price : 70
+    },
+    {
+        item : "biscuits",
+        price : 40
+    }
+]
+
+const priceTopay = shoppingCart.reduce( (acc,item) => acc + item.price,0 )
+
+console.log("total price to pay = ",priceTopay)
