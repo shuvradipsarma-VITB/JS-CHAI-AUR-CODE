@@ -10,20 +10,25 @@ const randomColor = ()=>{
         color = color + (Math.floor(Math.random() * 16)) // geenrate  random numbers between 1 to 16
     }
     return color
-}
+};
+let intervalId
 const startChangeColor = () => {
     
-    setInterval(changeBgColor,3000) // change background color automatically for an interval of 3 s onclicking start
-
+    
     const changeBgColor = () => {
+
         document.body.style.backgroundColor = randomColor()
+        
+    }
+    if(!intervalId){
+        tervalId = setInterval(changeBgColor,3000) // change background color automatically for an interval of 3 s onclicking start
     }
     
-
 }
 
 const stopChangeColor = () => {
-   
+   clearInterval(intervalId)
+   intervalId = null
 }
 
 // document.getElementById("start").addEventListener("click",startChangeColor())

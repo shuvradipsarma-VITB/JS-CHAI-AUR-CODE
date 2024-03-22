@@ -1,4 +1,9 @@
 
+
+// In JS functions are itself objects
+// so function name acts as the obj reference of the function
+
+
 function greeting()
 {
     console.log("hello world")

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        const obj = new XMLHttpRequest()
+        /*
+        onreadystatechange - Defines a function to be called when the readyState property changes
+        readyState	Holds the status of the XMLHttpRequest.
+            0: request not initialized
+            1: server connection established
+            2: request received
+            3: processing request
+            4: request finished and response is ready
+            status	200: "OK"
+            403: "Forbidden"
+            404: "Page not found"
+        For a complete list go to the Http Messages Reference
+        statusText	Returns the status-text (e.g. "OK" or "Not Found")
+        */
+        obj.open('GET',requestUrl)
+        // "this" used inside normal function refers to object of block scope
+        // " this" used inside arrow function refers to object of global scope(i.e inside the scope in which the current function is written )
+        obj.onreadystatechange = function(){ // obj.onreadystatechange = () => { // this will refer to global scope object i.e html object which is "window"}
+            console.log(this.readyState)
+            console.log(typeof(this.readyState))
+            if(obj.readyState === 4)
+            {
+                const data = JSON.parse(this.responseText) //converting string data(this.responseText) to JSON object
+                console.log(typeof data)
+                console.log(data.followers)
+                
+            }
+        }
+        obj.send()
+    </script>
+    
+</body>
+</html>
